@@ -5,12 +5,8 @@ get '/' do
   erb :index
 end
 
-post '/color' do
-  p "*" * 60
-  #Create and return a JSON object with the random cell and color given below.
-
+get '/color' do
   cell= rand(0..8)
   color= "#" + "%06x" % (rand * 0xffffff)
   {cell_number: cell, chosen_color: color}.to_json
-
 end

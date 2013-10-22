@@ -4,7 +4,7 @@ $(document).ready(function(){
     event.preventDefault();
     $.ajax({
       url: "color",
-      type: "post",
+      type: "get",
       dataType: 'json'
     }).done(function(result) {
       console.log(result);
